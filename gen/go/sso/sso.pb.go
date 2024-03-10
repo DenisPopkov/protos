@@ -25,7 +25,7 @@ type RegisterRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PhoneNumber string `protobuf:"bytes,1,opt,name=phoneNumber,proto3" json:"phoneNumber,omitempty"` // phone number of the user to register
+	PhoneNumber string `protobuf:"bytes,1,opt,name=phone,proto3" json:"phone,omitempty"` // phone number of the user to register
 	Password    string `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`       // password of the user to register
 }
 
@@ -127,7 +127,7 @@ type LoginRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PhoneNumber string `protobuf:"bytes,1,opt,name=phoneNumber,proto3" json:"phoneNumber,omitempty"`   // phone number of the user to register
+	PhoneNumber string `protobuf:"bytes,1,opt,name=phone,proto3" json:"phone,omitempty"`   // phone number of the user to register
 	Password    string `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`         // password of the user to register
 	AppId       int32  `protobuf:"varint,3,opt,name=app_id,json=appId,proto3" json:"app_id,omitempty"` // ID of the app to login to
 }
