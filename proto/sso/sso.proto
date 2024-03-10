@@ -7,7 +7,6 @@ option go_package = "popkov.sso.v1;ssov1";
 service Auth {
   rpc Register (RegisterRequest) returns (RegisterResponse);
   rpc Login (LoginRequest) returns (LoginResponse);
-  rpc isAdmin (IsAdminRequest) returns (IsAdminResponse);
 }
 
 message RegisterRequest {
@@ -27,12 +26,4 @@ message LoginRequest {
 
 message LoginResponse {
   string token = 1; // auth jwt token of the logged in user
-}
-
-message IsAdminRequest {
-  int64 user_id = 1; // user ID to validate
-}
-
-message IsAdminResponse {
-  bool is_admin = 1; // indicated whether the user is an admin
 }
