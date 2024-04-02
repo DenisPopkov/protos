@@ -12,9 +12,6 @@ service Auth {
 message RegisterRequest {
   string phone = 1; // phone number of the user to register
   string password = 2; // password of the user to register
-  int64 feed = 3; // feed id
-  string name = 4; // user name
-  string image = 5; // user image
 }
 
 message RegisterResponse {
